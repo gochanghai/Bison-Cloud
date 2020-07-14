@@ -1,4 +1,4 @@
-package com.bison.cloud.filter;
+package com.bison.gateway.filter;
 
 import cn.hutool.core.util.StrUtil;
 import com.nimbusds.jose.JWSObject;
