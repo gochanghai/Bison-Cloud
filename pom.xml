@@ -97,6 +97,11 @@
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>3.3.1</version>
+            </dependency>
 
             <!--阿里数据库连接池 -->
             <dependency>
@@ -215,6 +220,13 @@
                 <version>${bison.version}</version>
             </dependency>
 
+            <!-- 日记模块 -->
+            <dependency>
+                <groupId>com.bison.cloud</groupId>
+                <artifactId>bison-common-log</artifactId>
+                <version>${bison.version}</version>
+            </dependency>
+
             <!-- redis 模块 -->
             <dependency>
                 <groupId>com.bison.cloud</groupId>
@@ -228,10 +240,35 @@
                 <artifactId>bison-common-rabbitmq</artifactId>
                 <version>${bison.version}</version>
             </dependency>
+
+            <!-- rabbitmq 模块 -->
+            <dependency>
+                <groupId>com.bison.cloud</groupId>
+                <artifactId>bison-common-security</artifactId>
+                <version>${bison.version}</version>
+            </dependency>
+
+            <!-- rabbitmq 模块 -->
+            <dependency>
+                <groupId>com.bison.cloud</groupId>
+                <artifactId>bison-common-datascope</artifactId>
+                <version>${bison.version}</version>
+            </dependency>
+
+            <!-- 系统接口 -->
+            <dependency>
+                <groupId>com.bison.cloud</groupId>
+                <artifactId>bison-api-system</artifactId>
+                <version>${bison.version}</version>
+            </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 
     <modules>
+        <module>bison-mbg</module>
+        <module>bison-api</module>
 		<module>bison-oauth2-api</module>
 		<module>bison-oauth2-auth</module>
 		<module>bison-oauth2-gateway</module>
@@ -253,6 +290,7 @@
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
+                    <skip>true</skip>
                 </configuration>
             </plugin>
             <plugin>
@@ -262,5 +300,28 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
