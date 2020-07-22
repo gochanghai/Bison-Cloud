@@ -3,8 +3,8 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>bison-cloud</artifactId>
         <groupId>com.bison.cloud</groupId>
+        <artifactId>bison-cloud</artifactId>
         <version>0.1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -15,7 +15,12 @@
     <description>bison-common通用模块</description>
 
     <modules>
+        <module>bison-common-log</module>
         <module>bison-common-core</module>
+        <module>bison-common-redis</module>
+        <module>bison-common-rabbitmq</module>
+        <module>bison-common-security</module>
+        <module>bison-common-datascope</module>
     </modules>
 
 </project>
