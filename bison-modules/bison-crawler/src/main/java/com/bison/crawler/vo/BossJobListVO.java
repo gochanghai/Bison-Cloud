@@ -3,6 +3,7 @@ package com.bison.crawler.vo;
 import com.xuxueli.crawler.annotation.PageFieldSelect;
 import com.xuxueli.crawler.annotation.PageSelect;
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * @description:
@@ -10,21 +11,16 @@ import lombok.Data;
  * @time: 2020/7/17 23:40
  */
 @Data
-@PageSelect(cssQuery = ".job-list")
+@PageSelect(cssQuery = "#search-projects-ulist .project")
+@ToString
 public class BossJobListVO {
 
-    @PageFieldSelect(cssQuery = ".job-name")
-    private String jobName;
+    @PageFieldSelect(cssQuery = ".repository")
+    private String repository;
 
-    @PageFieldSelect(cssQuery = ".job-area")
-    private String jobArea;
+    @PageFieldSelect(cssQuery = ".description")
+    private String description;
 
-    @PageFieldSelect(cssQuery = ".job-pub-time")
-    private String jobPubTime;
-
-    @PageFieldSelect(cssQuery = ".job-limit clearfix")
-    private String jobLimit;
-
-    @PageFieldSelect(cssQuery = ".name")
-    private String companyName;
+    @PageFieldSelect(cssQuery = ".create-time")
+    private String createTime;
 }

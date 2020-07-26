@@ -20,8 +20,8 @@ public class CrawlerApplication {
 
     public static void getBossJobList(){
         XxlCrawler crawler = new XxlCrawler.Builder()
-                .setUrls("https://www.zhipin.com/c101280100/?page=1&ka=page-1")
-                //.setWhiteUrlRegexs("https://www.zhipin.com/c101280100/?page=\\\\b[1-2]&ka=page-\\\\b[1-2]")
+                .setUrls("https://gitee.com/xuxueli0323/projects?page=1")
+                .setWhiteUrlRegexs("https://gitee\\.com/xuxueli0323/projects\\?page=\\d+")
                 .setThreadCount(3)
                 .setPageParser(new PageParser<BossJobListVO>() {
                     @Override
