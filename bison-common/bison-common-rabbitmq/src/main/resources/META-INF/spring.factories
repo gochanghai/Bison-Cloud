@@ -1,0 +1,8 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.bison.common.rabbitmq.config.QueueConfig,\
+  com.bison.common.rabbitmq.service.SendService,\
+  com.bison.common.rabbitmq.service.ReceiverService,\
+  com.bison.common.rabbitmq.callback.ConfirmCallbackService,\
+  com.bison.common.rabbitmq.callback.ReturnCallbackService
+
+  
