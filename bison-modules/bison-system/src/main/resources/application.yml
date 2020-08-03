@@ -4,7 +4,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: bison-system
+    name: ruoyi-system
   cloud:
     nacos:
       discovery:
