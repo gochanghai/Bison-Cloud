@@ -21,6 +21,7 @@
         <module>bison-common-rabbitmq</module>
         <module>bison-common-security</module>
         <module>bison-common-datascope</module>
+        <module>bison-common-swagger</module>
     </modules>
 
 </project>

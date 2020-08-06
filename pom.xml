@@ -255,6 +255,13 @@
                 <version>${bison.version}</version>
             </dependency>
 
+            <!-- swagger -->
+            <dependency>
+                <groupId>com.bison.cloud</groupId>
+                <artifactId>bison-common-swagger</artifactId>
+                <version>${bison.version}</version>
+            </dependency>
+
             <!-- 系统接口 -->
             <dependency>
                 <groupId>com.bison.cloud</groupId>
