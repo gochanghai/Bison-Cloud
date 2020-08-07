@@ -21,6 +21,8 @@
         <module>bison-pay</module>
         <module>bison-cis</module>
         <module>bison-pdc</module>
+        <module>bison-wms</module>
+        <module>bison-file</module>
         <module>bison-crawler</module>
     </modules>
 

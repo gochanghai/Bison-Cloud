@@ -22,6 +22,7 @@
         <module>bison-common-security</module>
         <module>bison-common-datascope</module>
         <module>bison-common-swagger</module>
+        <module>bison-common-xxl-job-executor</module>
     </modules>
 
 </project>

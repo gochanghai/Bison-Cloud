@@ -171,13 +171,6 @@
                 <version>${fastjson.version}</version>
             </dependency>
 
-            <!-- OSS -->
-            <!--<dependency>-->
-                <!--<groupId>com.ruoyi</groupId>-->
-                <!--<artifactId>ruoyi-common-oss</artifactId>-->
-                <!--<version>${ruoyi.version}</version>-->
-            <!--</dependency>-->
-
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -259,6 +252,13 @@
             <dependency>
                 <groupId>com.bison.cloud</groupId>
                 <artifactId>bison-common-swagger</artifactId>
+                <version>${bison.version}</version>
+            </dependency>
+
+            <!-- swagger -->
+            <dependency>
+                <groupId>com.bison.cloud</groupId>
+                <artifactId>bison-common-xxl-job-executor</artifactId>
                 <version>${bison.version}</version>
             </dependency>
 
