@@ -227,6 +227,13 @@
                 <version>${bison.version}</version>
             </dependency>
 
+            <!-- redisson 模块 -->
+            <dependency>
+                <groupId>com.bison.cloud</groupId>
+                <artifactId>bison-common-redisson</artifactId>
+                <version>${bison.version}</version>
+            </dependency>
+
             <!-- rabbitmq 模块 -->
             <dependency>
                 <groupId>com.bison.cloud</groupId>

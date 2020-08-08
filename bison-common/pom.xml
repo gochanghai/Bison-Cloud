@@ -12,12 +12,13 @@
     <artifactId>bison-common</artifactId>
     <packaging>pom</packaging>
 
-    <description>bison-common通用模块</description>
+    <description>bison-common 通用模块</description>
 
     <modules>
         <module>bison-common-log</module>
         <module>bison-common-core</module>
         <module>bison-common-redis</module>
+        <module>bison-common-redisson</module>
         <module>bison-common-rabbitmq</module>
         <module>bison-common-security</module>
         <module>bison-common-datascope</module>
