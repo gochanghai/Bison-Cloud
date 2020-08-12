@@ -262,10 +262,17 @@
                 <version>${bison.version}</version>
             </dependency>
 
-            <!-- swagger -->
+            <!-- xxl-job-executor 定时任务执行器 模块 -->
             <dependency>
                 <groupId>com.bison.cloud</groupId>
                 <artifactId>bison-common-xxl-job-executor</artifactId>
+                <version>${bison.version}</version>
+            </dependency>
+
+            <!-- websocket -->
+            <dependency>
+                <groupId>com.bison.cloud</groupId>
+                <artifactId>bison-common-websocket</artifactId>
                 <version>${bison.version}</version>
             </dependency>
 
@@ -288,6 +295,7 @@
 		<module>bison-oauth2-gateway</module>
         <module>bison-common</module>
         <module>bison-modules</module>
+        <module>bison-visual</module>
     </modules>
     <packaging>pom</packaging>
 

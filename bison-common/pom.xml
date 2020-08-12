@@ -23,7 +23,9 @@
         <module>bison-common-security</module>
         <module>bison-common-datascope</module>
         <module>bison-common-swagger</module>
+        <module>bison-common-websocket</module>
         <module>bison-common-xxl-job-executor</module>
+        <module>bison-common-seata</module>
     </modules>
 
 </project>
