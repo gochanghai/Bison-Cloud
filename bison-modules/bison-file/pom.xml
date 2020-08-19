@@ -30,6 +30,11 @@
         </dependency>
 
         <dependency>
+            <groupId>com.bison.cloud</groupId>
+            <artifactId>bison-common-swagger</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
