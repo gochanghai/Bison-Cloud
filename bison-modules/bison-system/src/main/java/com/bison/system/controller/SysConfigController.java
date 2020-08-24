@@ -12,7 +12,6 @@ import com.bison.common.security.utils.SecurityUtils;
 import com.bison.system.domain.SysConfig;
 import com.bison.system.service.ISysConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -72,7 +71,6 @@ public class SysConfigController extends BaseController {
     /**
      * 新增参数配置
      */
-    @PreAuthorize("@ss.hasPermi('system:config:add')")
     @Log(title = "参数管理", businessType = BusinessType.INSERT)
     @PostMapping
     public CommonResult add(@Validated @RequestBody SysConfig config) {
@@ -86,7 +84,6 @@ public class SysConfigController extends BaseController {
     /**
      * 修改参数配置
      */
-    @PreAuthorize("@ss.hasPermi('system:config:edit')")
     @Log(title = "参数管理", businessType = BusinessType.UPDATE)
     @PutMapping
     public CommonResult edit(@Validated @RequestBody SysConfig config) {
@@ -100,7 +97,6 @@ public class SysConfigController extends BaseController {
     /**
      * 删除参数配置
      */
-    @PreAuthorize("@ss.hasPermi('system:config:remove')")
     @Log(title = "参数管理", businessType = BusinessType.DELETE)
     @DeleteMapping("/{configIds}")
     public CommonResult remove(@PathVariable Long[] configIds) {
@@ -110,7 +106,6 @@ public class SysConfigController extends BaseController {
     /**
      * 清空缓存
      */
-    @PreAuthorize("@ss.hasPermi('system:config:remove')")
     @Log(title = "参数管理", businessType = BusinessType.CLEAN)
     @DeleteMapping("/clearCache")
     public CommonResult clearCache() {
