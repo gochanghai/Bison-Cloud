@@ -40,6 +40,16 @@
         </dependency>
 
         <dependency>
+            <groupId>com.bison.cloud</groupId>
+            <artifactId>bison-common-log</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bison.cloud</groupId>
+            <artifactId>bison-common-redis</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>

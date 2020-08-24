@@ -21,7 +21,8 @@ public class CodeGenerator {
     public static void main(String[] args) {
 
         // 数据表，表名，多个英文逗号分割
-        String tables = "sys_role,sys_oss";
+        String tables = "sys_menu,sys_notice,sys_oauth_client_details,sys_oper_log,sys_post,sys_role,sys_role_dept," +
+                "sys_role_menu,sys_user,sys_user_post,sys_user_role";
         // 代码存放的位置
         String projectPath = "H:/mbg";
 
@@ -62,7 +63,7 @@ public class CodeGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         //pc.setModuleName("模块名");
-        pc.setParent("com.bison.hr");
+        pc.setParent("com.bison.system");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
