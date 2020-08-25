@@ -2,13 +2,16 @@ package com.bison.system.domain;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -78,5 +81,6 @@ public class SysMenu implements Serializable {
     @ApiModelProperty(value = "备注")
     private String remark;
 
-
+    @ApiModelProperty(value = "子菜单")
+    private List<SysMenu> children = new ArrayList<>();
 }

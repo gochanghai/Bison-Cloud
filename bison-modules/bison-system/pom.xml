@@ -73,6 +73,10 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.bison.cloud</groupId>
+            <artifactId>bison-common-datascope</artifactId>
+        </dependency>
 
     </dependencies>
 

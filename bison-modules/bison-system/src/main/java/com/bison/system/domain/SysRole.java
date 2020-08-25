@@ -2,13 +2,14 @@ package com.bison.system.domain;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -63,5 +64,23 @@ public class SysRole implements Serializable {
     @ApiModelProperty(value = "备注")
     private String remark;
 
+    @ApiModelProperty(value = "用户是否存在此角色标识 默认不存在")
+    private boolean flag = false;
+
+    @ApiModelProperty(value = "菜单组")
+    private Long[] menuIds;
+
+    @ApiModelProperty(value = "部门组（数据权限）")
+    private Long[] deptIds;
+
+    public boolean isAdmin()
+    {
+        return isAdmin(this.roleId);
+    }
+
+    public static boolean isAdmin(Long roleId)
+    {
+        return roleId != null && 1L == roleId;
+    }
 
 }

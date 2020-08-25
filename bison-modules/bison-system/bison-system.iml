@@ -221,5 +221,6 @@
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.19" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.12" level="project" />
     <orderEntry type="library" name="Maven: cn.hutool:hutool-all:5.3.8" level="project" />
+    <orderEntry type="module" module-name="bison-common-datascope" />
   </component>
 </module>

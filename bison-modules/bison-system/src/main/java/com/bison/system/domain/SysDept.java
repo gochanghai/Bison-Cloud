@@ -2,13 +2,16 @@ package com.bison.system.domain;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -69,5 +72,10 @@ public class SysDept implements Serializable {
     @ApiModelProperty(value = "更新时间")
     private LocalDateTime updateTime;
 
+    @ApiModelProperty(value = "父部门名称")
+    private String parentName;
+
+    @ApiModelProperty(value = "子部门")
+    private List<SysDept> children = new ArrayList<SysDept>();
 
 }

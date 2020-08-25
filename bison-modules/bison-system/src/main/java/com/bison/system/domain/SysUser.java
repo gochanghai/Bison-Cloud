@@ -2,13 +2,15 @@ package com.bison.system.domain;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * <p>
@@ -21,7 +23,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@ApiModel(value="SysUser对象", description="用户信息表")
+@ApiModel(value = "SysUser对象", description = "用户信息表")
 public class SysUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -84,5 +86,26 @@ public class SysUser implements Serializable {
     @ApiModelProperty(value = "备注")
     private String remark;
 
+    @ApiModelProperty(value = "盐加密")
+    private String salt;
 
+    @ApiModelProperty(value = "部门对象")
+    private SysDept dept;
+
+    @ApiModelProperty(value = "角色对象")
+    private List<SysRole> roles;
+
+    @ApiModelProperty(value = "角色组")
+    private Long[] roleIds;
+
+    @ApiModelProperty(value = "岗位组")
+    private Long[] postIds;
+
+    public boolean isAdmin() {
+        return isAdmin(this.userId);
+    }
+
+    public static boolean isAdmin(Long userId) {
+        return userId != null && 1L == userId;
+    }
 }
