@@ -1,6 +1,6 @@
 package com.ruoyi.common.websocket.controller;
 
-import com.ruoyi.common.core.web.domain.CommonResult;
+import com.bison.common.core.web.domain.CommonResult;
 import com.ruoyi.common.websocket.server.ZydWebsocketServer;
 import com.ruoyi.common.websocket.util.WebSocketUtil;
 import org.slf4j.Logger;

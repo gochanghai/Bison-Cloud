@@ -58,7 +58,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
         if (SysUser.isAdmin(userId)) {
             menuList = this.baseMapper.selectMenuList(menu);
         } else {
-            menu.getParams().put("userId", userId);
+            menu.getPerms().put("userId", userId);
             menuList = this.baseMapper.selectMenuListByUserId(menu);
         }
         return menuList;

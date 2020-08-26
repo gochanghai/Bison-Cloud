@@ -6,16 +6,14 @@ import org.springframework.cloud.client.SpringCloudApplication;
 
 /**
  * 监控中心
- * 
+ *
  * @author ruoyi
  */
 @EnableAdminServer
 @SpringCloudApplication
-public class RuoYiMonitorApplication
-{
-    public static void main(String[] args)
-    {
-        SpringApplication.run(RuoYiMonitorApplication.class, args);
+public class BisonMonitorApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(BisonMonitorApplication.class, args);
         System.out.println("(♥◠‿◠)ﾉﾞ  监控中心启动成功   ლ(´ڡ`ლ)ﾞ  \n" +
                 " .-------.       ____     __        \n" +
                 " |  _ _   \\      \\   \\   /  /    \n" +
