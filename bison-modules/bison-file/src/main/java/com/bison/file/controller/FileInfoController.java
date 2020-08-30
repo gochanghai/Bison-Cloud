@@ -14,16 +14,26 @@ import java.util.Map;
  * @date: 2020/8/23 23:56
  */
 @RestController
-@RequestMapping("/fileInfo")
+@RequestMapping("fileInfo")
 public class FileInfoController extends BaseController {
 
     /**
-     *
+     * 查询文件列表
      * @param param
      * @return
      */
-    @GetMapping("/list")
+    @GetMapping("list")
     public CommonResult list(Map<String, Object> param) {
+        return CommonResult.success();
+    }
+
+    /**
+     * 查询文件列表
+     * @param businessId
+     * @return
+     */
+    @GetMapping("listByBusinessId")
+    public CommonResult listByBusinessId(Long businessId) {
         return CommonResult.success();
     }
 }
