@@ -7,5 +7,8 @@ package com.bison.file.service;
  */
 public interface FileService {
 
+    /**
+     * 文件压缩
+     */
     void zipFile();
 }
