@@ -1,4 +1,4 @@
-package com.bison.api.controller;
+package com.bison.cis.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

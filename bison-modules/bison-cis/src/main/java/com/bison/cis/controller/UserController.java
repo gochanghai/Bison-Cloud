@@ -1,4 +1,4 @@
-package com.bison.api.controller;
+package com.bison.cis.controller;
 
 import com.bison.api.domain.UserDTO;
 import com.bison.api.holder.LoginUserHolder;

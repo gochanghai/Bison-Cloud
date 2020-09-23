@@ -1,8 +1,8 @@
-package com.bison.api.holder;
+package com.bison.cis.holder;
 
 import cn.hutool.core.convert.Convert;
 import cn.hutool.json.JSONObject;
-import com.bison.api.domain.UserDTO;
+import com.bison.cis.domain.UserDTO;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -25,7 +25,6 @@ public class LoginUserHolder {
         UserDTO userDTO = new UserDTO();
         userDTO.setUsername(userJsonObject.getStr("user_name"));
         userDTO.setId(Convert.toLong(userJsonObject.get("id")));
-        userDTO.setRoles(Convert.toList(String.class,userJsonObject.get("authorities")));
         return userDTO;
     }
 }
