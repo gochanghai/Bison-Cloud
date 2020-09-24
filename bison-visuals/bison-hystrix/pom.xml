@@ -3,13 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>com.bison.cloud</groupId>
-        <artifactId>bison-visual</artifactId>
+        <artifactId>bison-visuals</artifactId>
         <version>0.1.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>bison-visual-hystrix</artifactId>
-    <description> bison-visual-hystrix 熔断监控中心 </description>
+    <artifactId>bison-hystrix</artifactId>
+    <description> bison-hystrix 熔断监控中心 </description>
 
     <dependencies>
 
@@ -17,10 +17,12 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
+            <version>1.4.7.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+            <version>1.4.7.RELEASE</version>
         </dependency>
 		
         <!-- SpringCloud Ailibaba Nacos -->

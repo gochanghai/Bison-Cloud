@@ -8,13 +8,13 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>bison-visual</artifactId>
+    <artifactId>bison-visuals</artifactId>
     <packaging>pom</packaging>
     <description> bison-visual 图形化管理模块 </description>
 
     <modules>
-        <module>bison-visual-monitor</module>
-        <module>bison-visual-hystrix</module>
+        <module>bison-monitor</module>
+        <module>bison-hystrix</module>
     </modules>
 
 

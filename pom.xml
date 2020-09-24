@@ -301,7 +301,7 @@
 		<module>bison-oauth2-gateway</module>
         <module>bison-common</module>
         <module>bison-modules</module>
-        <module>bison-visual</module>
+        <module>bison-visuals</module>
     </modules>
     <packaging>pom</packaging>
 
