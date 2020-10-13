@@ -69,6 +69,9 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <mainClass>com.insta360.operation.AppLauncher</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
