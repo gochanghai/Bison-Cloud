@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.bison.common.datascope.service.AwaitUserService,\
+  com.bison.common.datascope.aspect.DataScopeAspect
+
+  

@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.bison.common.security.service.UserDetailsServiceImpl,\
+  com.bison.common.security.handler.CustomAccessDeniedHandler,\
+  com.bison.common.security.handler.GlobalExceptionHandler
+
+  

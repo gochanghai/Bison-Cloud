@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.bison.common.xxl.job.executor.config.XxlJobConfig
