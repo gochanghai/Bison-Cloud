@@ -1,0 +1,12 @@
+
+# redisson lock
+# 单机模式
+redisson:
+  address: redis://10.18.75.115:6379
+  password:
+
+# 哨兵模式
+redisson:
+  master-name: mymaster
+  password: xxxx
+  sentinel-addresses: 10.47.91.83:26379,10.47.91.83:26380,10.47.91.83:26381

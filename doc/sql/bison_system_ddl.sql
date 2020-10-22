@@ -180,7 +180,7 @@ insert into sys_menu values('109',  '日志管理',       '1',   '10', 'log',   
 insert into sys_menu values('110',  '定时任务',       '2',   '1',  'job',                                 'monitor/job/index',       1, 'C', '0', '0', 'monitor:job:list',        'job',           'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '定时任务菜单');
 insert into sys_menu values('111',  'Sentinel控制台', '2',   '2',  'http://localhost:8718',                '',                       1, 'C', '0', '0', 'monitor:sentinel:list',   'sentinel',      'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '流量控制菜单');
 insert into sys_menu values('112',  'Nacos控制台',    '2',   '3',  'http://localhost:8848/nacos',          '',                       1, 'C', '0', '0', 'monitor:nacos:list',      'nacos',         'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '服务治理菜单');
-insert into sys_menu values('113',  'Admin控制台',    '2',   '4',  'http://localhost:9100/login',          '',                       1, 'C', '0', '0', 'monitor:server:list',     'server',        'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '服务监控菜单');
+insert into sys_menu values('113',  'Admin控制台',    '2',   '4',  'http://localhost:9100/login',          '',                       1, 'C', '0', '0', 'monitor:service:list',     'service',        'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '服务监控菜单');
 insert into sys_menu values('114',  '表单构建',       '3',   '1',  'build',                                'tool/build/index',       1 ,'C', '0', '0', 'tool:build:list',         'build',         'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '表单构建菜单');
 insert into sys_menu values('115',  '代码生成',       '3',   '2',  'gen',                                  'tool/gen/index',         1, 'C', '0', '0', 'tool:gen:list',           'code',          'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '代码生成菜单');
 insert into sys_menu values('116',  '系统接口',       '3',   '3',  'http://localhost:8080/swagger-ui.html', '',                      1, 'C', '0', '0', 'tool:swagger:list',       'swagger',       'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '系统接口菜单');
@@ -709,8 +709,8 @@ create table sys_oauth_client_details (
 -- ----------------------------
 -- 初始化-终端配置表数据
 -- ----------------------------
-insert into sys_oauth_client_details values ('web',    '', '$2a$10$y2hKeELx.z3Sbz.kjQ4wmuiIsv5ZSbUQ1ov4BwFH6ccirP8Knp1uq', 'server', 'password,refresh_token',                    '', NULL, 3600, 7200, NULL, NULL);
-insert into sys_oauth_client_details values ('ruoyi',  '', '$2a$10$y2hKeELx.z3Sbz.kjQ4wmuiIsv5ZSbUQ1ov4BwFH6ccirP8Knp1uq', 'server', 'password,client_credentials,refresh_token', '', NULL, 3600, 7200, NULL, NULL);
+insert into sys_oauth_client_details values ('web',    '', '$2a$10$y2hKeELx.z3Sbz.kjQ4wmuiIsv5ZSbUQ1ov4BwFH6ccirP8Knp1uq', 'service', 'password,refresh_token',                    '', NULL, 3600, 7200, NULL, NULL);
+insert into sys_oauth_client_details values ('ruoyi',  '', '$2a$10$y2hKeELx.z3Sbz.kjQ4wmuiIsv5ZSbUQ1ov4BwFH6ccirP8Knp1uq', 'service', 'password,client_credentials,refresh_token', '', NULL, 3600, 7200, NULL, NULL);
 
 
 -- ----------------------------
