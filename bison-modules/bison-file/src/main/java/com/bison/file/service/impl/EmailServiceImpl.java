@@ -15,8 +15,6 @@ import java.util.stream.Collectors;
  */
 public class EmailServiceImpl implements EmailService {
 
-    private static final InstaLanguage DEFAULT_TEMPLATE_LANGUAGE = InstaLanguage.en_US;
-
     @Autowired
     EmailAccountDao accountDao;
 
