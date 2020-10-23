@@ -93,7 +93,7 @@ public class RedissonService {
 
 
     /**
-     * 获取列表
+     * 获取sSet列表
      *
      * @param key
      * @return
@@ -103,6 +103,12 @@ public class RedissonService {
         return rSortedSet;
     }
 
+    /**
+     * 保存sSet
+     *
+     * @param key
+     * @return
+     */
     public void setSortedSet(String key, Set<T> sets) {
         RSortedSet<T> rSortedSet = redissonClient.getSortedSet(key);
         Iterator<T> it = sets.iterator();
@@ -128,11 +134,23 @@ public class RedissonService {
     }
 
 
+    /**
+     * 保存布隆过滤器
+     *
+     * @param key
+     * @return
+     */
     public void setBloomFilter(String key, T value) {
         RBloomFilter bloomFilter = redissonClient.getBloomFilter(key);
         bloomFilter.add(value);
     }
 
+    /**
+     * 值是否存在
+     *
+     * @param key
+     * @return
+     */
     public Boolean getBloomFilter(String key, T value) {
         RBloomFilter bloomFilter = redissonClient.getBloomFilter(key);
         return bloomFilter.contains(value);
