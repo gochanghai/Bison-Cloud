@@ -118,15 +118,32 @@ public class RedissonService {
     }
 
 
+    /**
+     *
+     * @param key
+     * @param hashKey
+     * @return
+     */
     Object hGet(String key, String hashKey){
         return redissonClient.getMap(key).get(hashKey);
     }
 
+    /**
+     *
+     * @param key
+     * @param dataMap
+     */
     public void hSetAll(String key, Map<String, T> dataMap) {
         RMap<String, T> rMap = redissonClient.getMap(key);
         rMap.putAll(dataMap);
     }
 
+    /**
+     *
+     * @param key
+     * @param dataMap
+     * @param time
+     */
     public void hSetAll(String key, Map<String, T> dataMap, long time) {
         RMap<String, T> rMap = redissonClient.getMap(key);
         rMap.putAll(dataMap);
