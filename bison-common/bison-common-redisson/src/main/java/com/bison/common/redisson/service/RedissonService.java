@@ -19,23 +19,40 @@ public class RedissonService {
     @Autowired
     private RedissonClient redissonClient;
 
+    /**
+     * 保存
+     * @param key 键
+     * @param value 值
+     * @param time 有效期
+     */
     public void set(String key, Object value, long time) {
         RBucket<Object> bucket = redissonClient.getBucket(key);
         bucket.set(value, time, TimeUnit.SECONDS);
     }
 
+    /**
+     * 保存
+     * @param key 键
+     * @param value 值
+     */
     public void set(String key, Object value) {
         RBucket<Object> bucket = redissonClient.getBucket(key);
         bucket.set(value);
     }
 
+    /**
+     * 获取 value
+     *
+     * @param key 键
+     * @return
+     */
     public Object get(String key) {
         return redissonClient.getBucket(key).get();
     }
 
 
     /**
-     * 获取列表
+     * 获取列表 list
      *
      * @param key
      * @return
@@ -45,6 +62,12 @@ public class RedissonService {
         return rList;
     }
 
+    /**
+     * 保存list
+     *
+     * @param key
+     * @return
+     */
     public void setRList(String key, List<T> list) {
         RList<Object> rList = redissonClient.getList(key);
         Iterator<T> it = list.iterator();
@@ -53,6 +76,12 @@ public class RedissonService {
         }
     }
 
+    /**
+     * 保存list
+     *
+     * @param key
+     * @return
+     */
     public void setRList(String key, List<T> list, long time) {
         RList<Object> rList = redissonClient.getList(key);
         Iterator<T> it = list.iterator();
@@ -64,7 +93,7 @@ public class RedissonService {
 
 
     /**
-     * 获取列表
+     * 获取set列表
      *
      * @param key
      * @return
@@ -74,6 +103,12 @@ public class RedissonService {
         return rSet;
     }
 
+    /**
+     * 保存set
+     *
+     * @param key
+     * @return
+     */
     public void setRSet(String key, Set<T> sets) {
         RSet<T> rSet = redissonClient.getSet(key);
         Iterator<T> it = sets.iterator();
@@ -81,6 +116,13 @@ public class RedissonService {
             rSet.add(it.next());
         }
     }
+
+    /**
+     * 保存set
+     *
+     * @param key
+     * @return
+     */
     public void setRSet(String key, Set<T> sets, long time) {
         RSet<T> rSet = redissonClient.getSet(key);
         Iterator<T> it = sets.iterator();
