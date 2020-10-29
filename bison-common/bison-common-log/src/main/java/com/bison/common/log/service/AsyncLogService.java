@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AsyncLogService {
+
     @Autowired
     private RemoteLogService remoteLogService;
 
