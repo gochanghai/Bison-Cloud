@@ -1,4 +1,4 @@
-package com.bison.api.domain;
+package com.bison.oms.domain;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
