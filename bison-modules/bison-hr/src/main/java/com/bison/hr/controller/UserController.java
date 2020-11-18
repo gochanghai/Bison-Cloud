@@ -1,6 +1,5 @@
 package com.bison.api.controller;
 
-import com.bison.api.domain.UserDTO;
 import com.bison.api.holder.LoginUserHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
