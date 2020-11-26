@@ -1,7 +1,5 @@
 package com.bison.hr.controller;
 
-import com.bison.api.holder.LoginUserHolder;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,8 +10,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user")
 public class UserController{
-
-    @Autowired
-    private LoginUserHolder loginUserHolder;
 
 }
